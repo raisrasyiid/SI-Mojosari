@@ -86,6 +86,9 @@ class Admin extends CI_Controller {
 
 	public function dashboard()
 	{
+        if (empty($this->session->userdata('username'))) {
+            redirect('admin');
+        } 
 		$this->load->view('admin/layout/header');
 		$this->load->view('admin/layout/menu');
 		$this->load->view('admin/layout/footer');
