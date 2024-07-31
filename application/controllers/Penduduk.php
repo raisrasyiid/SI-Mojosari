@@ -41,6 +41,7 @@ class Penduduk extends CI_Controller {
         $pekerjaan = $this->input->post('pekerjaan');
         $agama = $this->input->post('agama');
         $alamat = $this->input->post('alamat');
+        $no_telp = $this->input->post('no_telp');
 
         $config['upload_path'] = './assets/foto_penduduk/';
         $config['allowed_types'] = 'jpg|png|jpeg';
@@ -61,20 +62,13 @@ class Penduduk extends CI_Controller {
                 'pekerjaan' => $pekerjaan,
                 'agama' => $agama,
                 'alamat' => $alamat,
+                'no_telp'=> $no_telp,
                 'gambar' => $data_file['file_name'],
             );
-
             $this->Madmin->insert('data_penduduk', $dataInput);
-
             $this->session->set_flashdata("pesan", "simpan_sukses");
             redirect('penduduk');
         } else {
-            // Menampilkan error dari upload library
-            $error = $this->upload->display_errors();
-            echo "<pre>";
-            print_r($error);
-            echo "</pre>";
-            die();
             $this->session->set_flashdata('penduduk', 'Data tidak valid!');
             redirect('penduduk/addViewPenduduk');
         }
@@ -105,6 +99,7 @@ class Penduduk extends CI_Controller {
 		$pekerjaan = $this->input->post('pekerjaan');
 		$agama = $this->input->post('agama');
 		$alamat = $this->input->post('alamat');
+		$no_telp = $this->input->post('no_telp');
 		$gambar_lama = $this->input->post('gambar_lama'); 
 	
 		// Membersihkan input dari XSS
@@ -116,6 +111,7 @@ class Penduduk extends CI_Controller {
 		$pekerjaan = $this->security->xss_clean($pekerjaan);
 		$agama = $this->security->xss_clean($agama);
 		$alamat = $this->security->xss_clean($alamat);
+		$no_telp = $this->security->xss_clean($no_telp);
 	
 		$config['upload_path'] = './assets/foto_penduduk/';
 		$config['allowed_types'] = 'jpg|png|jpeg';
@@ -146,6 +142,7 @@ class Penduduk extends CI_Controller {
 			'pekerjaan'=>$pekerjaan,
 			'agama'=>$agama,
 			'alamat'=>$alamat,
+            'no_telp' =>$no_telp,
 			'gambar'=>$gambar_baru,
 		);
 		$this->Madmin->update('data_penduduk', $dataUpdate, 'id_penduduk', $id);
