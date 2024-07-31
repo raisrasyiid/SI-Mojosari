@@ -73,6 +73,12 @@
                                 </div>
                             </div>
                             <div class="form-group row mb-3">
+                                <label for="no_telp" class="col-sm-2 col-form-label pr-0">No Telfon</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="no_telp" name="no_telp" required>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
                                 <label for="gambar" class="col-sm-2 col-form-label">Gambar</label>
                                 <div class="col-sm-5">
                                     <input type="file" class="form-control" id="gambar" name="gambar" placeholder="Gambar" autofocus required="required" />

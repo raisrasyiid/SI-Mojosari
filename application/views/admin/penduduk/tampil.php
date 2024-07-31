@@ -2,7 +2,7 @@
 <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>Data penduduk RT 11</h1>
+            <h1>Data Penduduk RT 11</h1>
           </div>
           <div class="row">
             <div class="col-12">
@@ -15,9 +15,9 @@
                           <tr>
                             <th class="text-center">#</th>
                             <th class="text-center">Foto</th>
-                            <th class="text-center">NIK</th>
                             <th class="text-center">Nama Lengkap</th>
                             <th class="text-center">Jenis Kelamin</th>
+                            <th class="text-center">Nomor Telfon</th>
                             <th class="text-center">Action</th>
                           </tr>
                         </thead>
@@ -27,9 +27,9 @@
                                 <tr style="text-align:center">
                                     <td class="text-center align-middle"><?php echo $no; ?></td>
                                     <td><img src="<?php echo base_url('assets/foto_penduduk/'.$val->gambar); ?>" width="100" alt="foto"></td></td>
-                                    <td class="text-center align-middle"><?php echo ucwords($val->nik); ?></td>
                                     <td class="text-center align-middle"><?php echo ucwords($val->nama_lengkap); ?></td>
                                     <td class="text-center align-middle"><?php echo ucwords($val->jenis_kelamin); ?></td>
+                                    <td class="text-center align-middle"><?php echo ucwords($val->no_telp); ?></td>
                                     <td class="text-center align-middle">
                                       <div class="btn-group">
                                         <a href="<?= site_url('penduduk/detail/' . (is_array($val) ? $val['nik'] : $val->nik)); ?>" class="btn btn-info"><i class="fas fa-eye"></i></a>

@@ -58,21 +58,28 @@
                                     <div class="form-group row mb-3">
                                         <label for="agama" class="col-sm-3 col-form-label">Agama</label>
                                         <div class="col-sm-9">
-                                        <select name="agama" class="form-control" id="agama" required>
-                                        <option value="" selected disabled>- pilih -</option>
-                                        <option value="islam">Islam</option>
-                                        <option value="kristen">Kristen</option>
-                                        <option value="katholik">Katholik</option>
-                                        <option value="hindu">Hindu</option>
-                                        <option value="budha">Budha</option>
-                                        <option value="koghucu">Konghucu</option>
-                                    </select>
+                                            <select name="agama" class="form-control">
+                                                <option value="" selected disabled>- pilih -</option>
+                                                <option value="Islam" <?php echo ($penduduk->agama == "Islam") ? 'selected' : ''; ?>>Islam</option>
+                                                <option value="Kristen" <?php echo ($penduduk->agama == "Kristen") ? 'selected' : ''; ?>>Kristen</option>
+                                                <option value="Katholik" <?php echo ($penduduk->agama == "Katholik") ? 'selected' : ''; ?>>Katholik</option>
+                                                <option value="Hindu" <?php echo ($penduduk->agama == "Hindu") ? 'selected' : ''; ?>>Hindu</option>
+                                                <option value="Budha" <?php echo ($penduduk->agama == "Budha") ? 'selected' : ''; ?>>Budha</option>
+                                                <option value="Konghucu" <?php echo ($penduduk->agama == "Konghucu") ? 'selected' : ''; ?>>Konghucu</option>
+                                            </select>
                                         </div>
                                     </div>
+
                                     <div class="form-group row mb-3">
                                         <label for="alamat" class="col-sm-3 col-form-label pr-0">Alamat</label>
                                         <div class="col-sm-9">
                                             <textarea name="alamat" id="alamat" class="form-control" required style="width: 100%;"><?php echo ucwords( $penduduk->alamat); ?></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-3">
+                                        <label for="no_telp" class="col-sm-3 col-form-label pr-0">Nomor Telfon</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="no_telp" name="no_telp" required value="<?php echo ucwords($penduduk->no_telp); ?>">
                                         </div>
                                     </div>
                                     <div class="form-group row mb-3">

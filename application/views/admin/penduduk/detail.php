@@ -60,6 +60,12 @@
                                             <textarea disabled name="alamat" id="alamat" class="form-control" required><?php echo ucwords( $penduduk->alamat); ?></textarea>
                                         </div>
                                     </div>
+                                    <div class="form-group row mb-3">
+                                        <label for="no_telp" class="col-sm-3 col-form-label pr-0">Nomor Telfon</label>
+                                        <div class="col-sm-9">
+                                            <input disabled type="text" class="form-control" id="no_telp" name="no_telp" required value="<?php echo ucwords($penduduk->no_telp); ?>">
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <button type="button" class="btn btn-danger float-left ml-2" onclick="window.history.back()">Kembali</button>
                                     </div>
