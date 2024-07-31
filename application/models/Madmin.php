@@ -54,5 +54,29 @@ class Madmin extends CI_Model {
         $this->db->delete($tabel, array($id => $val));
     }
 
+    #tampil data user transaksi
+    public function join_penghuni()
+    {
+        $this->db->select('*');
+        $this->db->from('data_penduduk');
+        $this->db->join('data_penghuni', 'data_penduduk.id_penduduk = data_penghuni.id_penduduk');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    #edit penduduk
+    public function get_penghuni_by_id_penduduk($id_penduduk)
+    {
+        $this->db->select('*');
+        $this->db->from('data_penduduk');
+        $this->db->join('data_penghuni', 'data_penduduk.id_penduduk = data_penghuni.id_penduduk'); // Pastikan ini kolom yang benar
+        $this->db->where('data_penduduk.id_penduduk', $id_penduduk);
+        return $this->db->get()->row_object();
+    }
+
+    
+
+
+
 }
 ?>
