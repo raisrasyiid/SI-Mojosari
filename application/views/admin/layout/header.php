@@ -45,7 +45,7 @@
         <ul class="navbar-nav navbar-right">
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <img alt="image" src="<?= base_url('assets/dist/assets/img/avatar/avatar-1.png');?>" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
+            <div class="d-sm-none d-lg-inline-block">Hi, <?=$this->session->userdata('username')?></div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Role : <?=$this->session->userdata('role')?></div>
               <a href="features-profile.html" class="dropdown-item has-icon">
@@ -81,7 +81,7 @@
             <li class="menu-header">Manajemen Data Penduduk</li>
             <li class="dropdown">
               <a href="<?=site_url('penduduk/index')?>" class="nav-link"><i class="fas fa-users"></i> <span>Data Penduduk</span></a>
-              <a href="<?=site_url('penghuni/index')?>" class="nav-link"><i class="fas fa-users"></i> <span>Data Penghuni</span></a>
+              <a href="<?=site_url('penghuni/index')?>" class="nav-link"><i class="fas fa-home"></i> <span>Data Penghuni</span></a>
             </li>
             <li class="menu-header">Manajemen Data Keuangan</li>
             <li class="dropdown">
