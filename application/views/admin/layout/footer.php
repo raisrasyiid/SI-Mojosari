@@ -1,6 +1,6 @@
 <footer class="main-footer">
         <div class="footer-left">
-          Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
+          Copyright &copy; 2024 <div class="bullet"></div> Design By <a href="#"> Rais Rasyiid</a>
         </div>
         <div class="footer-right">
           
@@ -25,9 +25,11 @@
   <script src="<?= base_url('assets/dist/assets/modules/jqvmap/dist/maps/jquery.vmap.world.js');?>"></script>
   <script src="<?= base_url('assets/dist/assets/modules/summernote/summernote-bs4.js');?>"></script>
   <script src="<?= base_url('assets/dist/assets/modules/chocolat/dist/js/jquery.chocolat.min.js');?>"></script>
+  <script src="<?= base_url('assets/dist/assets/modules/dropzonejs/min/dropzone.min.js');?>"></script>
 
   <!-- Page Specific JS File -->
   <script src="<?= base_url('assets/dist/assets/js/page/index-0.js');?>"></script>
+  <script src="<?= base_url('assets/dist/assets/js/page/components-multiple-upload.js');?>"></script>
   
   <!-- Template JS File -->
   <script src="<?= base_url('assets/dist/assets/js/scripts.js');?>"></script>

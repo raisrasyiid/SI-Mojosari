@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="<?= base_url('assets/dist/assets/modules/weather-icon/css/weather-icons.min.css');?>">
   <link rel="stylesheet" href="<?= base_url('assets/dist/assets/modules/weather-icon/css/weather-icons-wind.min.css');?>">
   <link rel="stylesheet" href="<?= base_url('assets/dist/assets/modules/summernote/summernote-bs4.css');?>">
+  <link rel="stylesheet" href="<?= base_url('assets/dist/assets/modules/dropzonejs/dropzone.css')?>">
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="<?= base_url('assets/dist/assets/css/style.css');?>">
@@ -67,7 +68,7 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="index.html">Sistem Informasi RT 11</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">St</a>
@@ -75,7 +76,7 @@
           <ul class="sidebar-menu">
             <!-- <li class="menu-header">Dashboard</li> -->
             <li class="dropdown active">
-              <a href="#" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+              <a href="<?=site_url('admin/dashboard')?>" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Manajemen Data Penduduk</li>
             <li class="dropdown">
